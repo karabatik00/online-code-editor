@@ -52,9 +52,7 @@ online-html-editor/
 ├── styles.css          # CSS styles for the project
 ├── scripts.js          # JavaScript for editor functionality
 ├── README.md           # Project README file
-└── assets/             # Directory for assets like images or fonts
-    ├── codemirror/     # CodeMirror library files
-    └── ...
+
 ```
 
 ## Customization
