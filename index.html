@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online HTML Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/theme/monokai.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="project-title" contenteditable="true" aria-label="Project Title">Untitled Project</h1>
+            <div class="buttons">
+                <button class="save-btn" onclick="saveProject()" aria-label="Save Project">
+                    <i class="fas fa-save"></i> Save
+                </button>
+            </div>
+        </div>
+        <div class="editor-container">
+            <div class="editor html-editor">
+                <div class="editor-header">
+                    <label for="html-code"><i class="fab fa-html5"></i> HTML</label>
+                </div>
+                <textarea id="html-code" name="html-code" placeholder="Write HTML here..." aria-label="HTML Code Editor"></textarea>
+            </div>
+            <div class="editor css-editor">
+                <div class="editor-header">
+                    <label for="css-code"><i class="fab fa-css3-alt"></i> CSS</label>
+                </div>
+                <textarea id="css-code" name="css-code" placeholder="Write CSS here..." aria-label="CSS Code Editor"></textarea>
+            </div>
+            <div class="editor js-editor">
+                <div class="editor-header">
+                    <label for="js-code"><i class="fab fa-js"></i> JS</label>
+                </div>
+                <textarea id="js-code" name="js-code" placeholder="Write JavaScript here..." aria-label="JavaScript Code Editor"></textarea>
+            </div>
+        </div>
+        <iframe id="preview" class="preview" title="Preview" aria-label="Code Preview"></iframe>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
